@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="calculator.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <div id="screen">
+            <div id="preview"></div>
+            <div id="display"></div>
+        </div>
+        <div id="buttons">
+            <div id="left-buttons">
+                <div id="delete-buttons">
+                    <button id="clear" class="del material-symbols-outlined" onclick="clr()">delete</button>
+                    <button id="back" class="del material-symbols-outlined" onclick="backspace()">backspace</button>
+                </div>
+                <div id="number-buttons">
+                    <div class="row">
+                        <button id="7" class="num" onclick="digit(7)">7</button>
+                        <button id="8" class="num" onclick="digit(8)">8</button>
+                        <button id="9" class="num" onclick="digit(9)">9</button>
+                    </div>
+                    <div class="row">
+                        <button id="4" class="num" onclick="digit(4)">4</button>
+                        <button id="5" class="num" onclick="digit(5)">5</button>
+                        <button id="6" class="num" onclick="digit(6)">6</button>
+                    </div>
+                    <div class="row">
+                        <button id="1" class="num" onclick="digit(1)">1</button>
+                        <button id="2" class="num" onclick="digit(2)">2</button>
+                        <button id="3" class="num" onclick="digit(3)">3</button>
+                    </div>
+                    <div class="row">
+                        <button id="0" class="num zero" onclick="digit(0)">0</button>
+                        <button id="." class="num" onclick="decimal()">.</button>
+                    </div>
+                </div>
+            </div>
+            <div id="operator-buttons">
+                <button id="+" class="op" onclick="operator('+')">+</button>
+                <button id="-" class="op" onclick="operator('-')">-</button>
+                <button id="*" class="op" onclick="operator('*')">*</button>
+                <button id="/" class="op" onclick="operator('/')">/</button>
+                <button id="=" class="equals" onclick="equals()">=</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
